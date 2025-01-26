@@ -1,0 +1,96 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: myFontBold;
+    src: url(/assets/Font/NunitoSans-Bold.woff);
+    font-family: myFontMed;
+    src: url(/assets/Font/NunitoSans-Medium.woff);
+    font-family: myFontReg;
+    src: url(/assets/Font/NunitoSans-Regular.woff);
+}
+
+html, body {
+    font-family:myFontReg;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-c3;
+}
+
+.nav {
+    background-color: $primary-c1;
+    height: 4rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Create 3 equal columns */
+    // grid-template-rows: 100px 200px; /* Create two rows with different heights */
+    gap: 16px; /* Space between items */
+    margin: auto;
+
+    // &__bar {
+    //     display:flex;
+    //     flex-direction: row;
+    //     align-items: center;
+    //     justify-content: center;
+    //     margin: auto;
+    // }
+
+    &__logo {
+        display: flex;
+        margin: auto;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        height: 64px;
+    }
+
+    &__link {
+        color: $secondary-c2;
+        padding: 16px;
+        position: relative;
+        height: 64px;
+    }
+
+    &__link:hover, &__link:active {
+        color: $primary-c3;
+        font-weight: 700;
+    }
+
+    /* Underline effect */
+    &__link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $primary-c3;
+    }
+
+    &__link:hover::after {
+        width: 100%; /* Make the underline span the full width of the link */
+    }
+}
+
+.logo {
+    background-color: $primary-c1;
+    display: flex;
+    height: 1.25rem;
+    width: 7.5rem;
+}

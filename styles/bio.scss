@@ -1,0 +1,21 @@
+@use './partials/global' as *;
+@use './partials/mixins' as *;
+@use './partials/variables' as *;
+
+.hero-ban {
+    background-image: url(/assets/Images/hero-bio.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 43.75rem;
+    opacity: $primary-c1 50%;
+
+    &__title {
+        color: $primary-c3;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+        padding: 1rem;
+    }
+}
