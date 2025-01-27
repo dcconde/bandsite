@@ -18,7 +18,6 @@
 
 html, body {
     font-family:myFontReg;
-    display: flex;
 }
 
 ul {
@@ -36,11 +35,21 @@ a {
 
 .nav {
     background-color: $primary-c1;
-    height: 4rem;
+    height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
     margin: auto;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    @include desktop {
+        flex-direction: row;
+    }
 
     &__bar {
         display:flex;
