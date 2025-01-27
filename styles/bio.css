@@ -88,20 +88,12 @@ a {
   width: 7.5rem;
 }
 
-.footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-left: 1rem;
-  background-color: #323232;
-}
-
 .hero-ban {
   background-image: url(/assets/Images/hero-bio.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 20rem;
+  height: 30rem;
   background-color: rgba(50, 50, 50, 0.5);
 }
 .hero-ban__title {
@@ -121,7 +113,7 @@ a {
   padding-bottom: 1rem;
 }
 .section:nth-child(2) {
-  background-color: #E1E1E1; /* Background color for the gallery section */
+  background-color: #FAFAFA; /* Background color for the gallery section */
 }
 .section__title {
   padding-top: 1.5rem;
@@ -150,4 +142,13 @@ a {
 }
 .section__icon {
   background-color: #323232;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  background-color: #323232;
+  background-image: none;
 }/*# sourceMappingURL=bio.css.map */
