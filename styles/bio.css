@@ -28,11 +28,19 @@ a {
 .nav {
   background-color: #323232;
   height: 4rem;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Create 3 equal columns */
-  gap: 16px; /* Space between items */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin: auto;
   /* Underline effect */
+}
+.nav__bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 .nav__logo {
   display: flex;
@@ -81,8 +89,8 @@ a {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 43.75rem;
-  opacity: #323232 50%;
+  height: 20rem;
+  background-color: rgba(50, 50, 50, 0.5);
 }
 .hero-ban__title {
   color: #FFFFFF;
@@ -91,4 +99,44 @@ a {
   justify-content: flex-start;
   align-content: center;
   padding: 1rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+.section:nth-child(2) {
+  background-color: #E1E1E1; /* Background color for the gallery section */
+}
+.section__title {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+.section__img {
+  width: 100%;
+  padding: 0 0 1rem 0;
+}
+.section__paragraph-title {
+  padding: 1rem 0 1rem 0;
+}
+.section__paragraph-body {
+  font-size: 0.8rem;
+  line-height: 18px;
+  font-weight: 400;
+}
+.section__gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.section__photo {
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.footer {
+  background-color: #323232;
 }/*# sourceMappingURL=bio.css.map */
