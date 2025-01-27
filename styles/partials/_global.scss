@@ -29,6 +29,10 @@ a {
     color: $primary-c3;
 }
 
+.bold {
+    font-weight: 700;
+}
+
 .nav {
     background-color: $primary-c1;
     height: 4rem;
@@ -93,4 +97,12 @@ a {
     display: flex;
     height: 1.25rem;
     width: 7.5rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 1rem;
+    background-color: $primary-c1;
 }

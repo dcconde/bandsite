@@ -25,6 +25,10 @@ a {
   color: #FFFFFF;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .nav {
   background-color: #323232;
   height: 4rem;
@@ -84,6 +88,14 @@ a {
   width: 7.5rem;
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  background-color: #323232;
+}
+
 .hero-ban {
   background-image: url(/assets/Images/hero-bio.jpg);
   background-size: cover;
@@ -136,7 +148,6 @@ a {
   padding-top: 1rem;
   width: 100%;
 }
-
-.footer {
+.section__icon {
   background-color: #323232;
 }/*# sourceMappingURL=bio.css.map */

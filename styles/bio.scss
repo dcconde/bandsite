@@ -62,8 +62,8 @@
         padding-top: 1rem;
         width: 100%;
     }
-}
 
-.footer {
-    background-color: $primary-c1;
+    &__icon {
+       background-color: $primary-c1; 
+    }
 }
