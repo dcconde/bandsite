@@ -48,7 +48,8 @@
     }
 
     @include desktop {
-        flex-direction: row;
+        flex-direction: column;
+        
     }
   
     &:nth-child(2) {

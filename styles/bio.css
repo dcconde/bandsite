@@ -149,7 +149,7 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .section {
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 .section:nth-child(2) {
