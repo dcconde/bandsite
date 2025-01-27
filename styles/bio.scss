@@ -84,11 +84,30 @@
     }
 }
 
-// .footer-section {
-//     padding-left: 1rem;
-//     background-color: $primary-c1;
-//     background-image: none;
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-// }
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: $primary-c1;
+    color: $primary-c3;
+
+    &__section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__card {
+        text-align: center;
+    }
+}
+
