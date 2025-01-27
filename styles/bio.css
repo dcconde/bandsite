@@ -158,21 +158,10 @@ a {
 .section__title {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
-  font-size: 1.5rem;
 }
 .section__img {
   width: 100%;
   padding: 0 0 1rem 0;
-}
-.section__quote {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-}
-.section__quote-author {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
 }
 .section__paragraph-title {
   padding: 1rem 0 1rem 0;
@@ -184,12 +173,12 @@ a {
 }
 .section__gallery {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .section__photo {
   padding-top: 1rem;
-  width: 31%;
+  width: 100%;
 }
 .section__icon {
   background-color: #323232;
@@ -233,4 +222,9 @@ a {
   margin-bottom: 2rem;
   color: #FFFFFF;
   background-color: #323232;
+}
+.footer__card {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  padding: 1rem;
 }/*# sourceMappingURL=bio.css.map */

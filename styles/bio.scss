@@ -58,24 +58,11 @@
     &__title {
         padding-top: 1.5rem;
         padding-bottom: 1rem;
-        font-size: 1.5rem;
     }
 
     &__img {
         width: 100%;
         padding: 0 0 1rem 0;
-    }
-
-    &__quote {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        font-weight: 700;
-    }
-
-    &__quote-author {
-        font-size: 0.875rem;
-        line-height: 1.375rem;
-        font-weight: 600;
     }
 
     &__paragraph-title {
@@ -90,13 +77,13 @@
 
     &__gallery {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
     }
 
     &__photo {
         padding-top: 1rem;
-        width: 31%;
+        width: 100%;
     }
 
     &__icon {
@@ -151,5 +138,11 @@
     // &__card {
     //     text-align: center;
     // }
+
+    &__card {
+        font-size: 0.813rem;
+        line-height: 1.125rem;
+        padding: 1rem;
+    }
 }
 
