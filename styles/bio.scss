@@ -135,14 +135,20 @@
     //     text-align: center;
     // }
 
-    // &__card {
-    //     text-align: center;
-    // }
-
     &__card {
+        padding: 2rem;
+    }
+
+    &__text {
         font-size: 0.813rem;
         line-height: 1.125rem;
         padding: 1rem;
     }
 }
 
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: space-evenly;
+}

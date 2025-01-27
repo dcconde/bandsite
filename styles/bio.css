@@ -224,7 +224,17 @@ a {
   background-color: #323232;
 }
 .footer__card {
+  padding: 2rem;
+}
+.footer__text {
   font-size: 0.813rem;
   line-height: 1.125rem;
   padding: 1rem;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: space-evenly;
 }/*# sourceMappingURL=bio.css.map */
