@@ -32,19 +32,19 @@ a {
 .nav {
     background-color: $primary-c1;
     height: 4rem;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* Create 3 equal columns */
-    // grid-template-rows: 100px 200px; /* Create two rows with different heights */
-    gap: 16px; /* Space between items */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: auto;
 
-    // &__bar {
-    //     display:flex;
-    //     flex-direction: row;
-    //     align-items: center;
-    //     justify-content: center;
-    //     margin: auto;
-    // }
+    &__bar {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
 
     &__logo {
         display: flex;
