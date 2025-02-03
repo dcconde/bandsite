@@ -71,34 +71,41 @@ a {
         align-items: center;
         justify-content: center;
         margin: auto;
-        height: 64px;
+        height: 4rem;
     }
 
     &__link {
         color: $secondary-c2;
-        padding: 16px;
+        padding: 1rem;
         position: relative;
-        height: 64px;
-    }
+        height: 4rem;
 
-    &__link:hover, &__link:active {
-        color: $primary-c3;
-        font-weight: 700;
-    }
+        &:hover,
+        &:active {
+            color: $primary-c3;
+            font-weight: 700;
+        }
 
-    /* Underline effect */
-    &__link::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: $primary-c3;
-    }
+        &.active {
+            color: $primary-c3;
+            font-weight: 700;
+        }
 
-    &__link:hover::after {
-        width: 100%; /* Make the underline span the full width of the link */
+        /* Underline effect */
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0.125rem;
+            background-color: $primary-c3;
+            transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+            width: 100%; /* Make the underline span the full width of the link */
+        }
     }
 }
 
