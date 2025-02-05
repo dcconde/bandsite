@@ -12,7 +12,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-image: url(/assets/Images/hero-bio.jpg);
+    background-image: url(/assets/images/hero-shows.jpg);
     background-size: cover;
     background-position: center;
     background-color: rgba($primary-c1, 0.5);
@@ -33,6 +33,10 @@
         padding: 1rem;
         margin: 0;
         text-align: center;
+    }
+
+    &__title-shows {
+        color: $primary-c3;
     }
 }
 

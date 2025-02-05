@@ -132,13 +132,17 @@
       </section>
       <section class="section">
         <h1 class="section__title">Join the Conversation</h1>
+        <!-- Comment Form -->
+         <div class="comments-section">
         <form class="comment-form">
+          <label class="comment-form__label" for="name">Name</label>
           <input
             class="comment-form__input"
             type="text"
             name="name"
             placeholder="Enter your name"
           />
+          <label class="comment-form__label" for="comment">Comment</label>
           <textarea
             class="comment-form__textarea"
             name="comment"
@@ -150,6 +154,7 @@
         <ul class="comment-list">
           <!-- list items below will be created using JavaScript, think of this as a template/reference that can be re-created -->
         </ul>
+      </div>
       </section>
     </main>
     <footer>

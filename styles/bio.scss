@@ -133,6 +133,64 @@
     }
 }
 
+// Comment section container
+.comments-section {
+    max-width: 40rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    @include desktop {
+        flex-direction: column;
+    }
+}
+
+// Comment Form
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    &__label {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    &__input, &__textarea {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border: 1px solid $primary-c2;
+        border-radius: 0.25rem;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    &__button {
+        color: $primary-c3;
+        align-self: flex-start;
+        padding: 0.75rem 1.5rem;
+        background-color: $primary-c1;
+        font-size: 1rem;
+        border: none;
+        border-radius: 0.25rem;
+    }
+}
+
+// Comments list
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+// .comment-item {
+//     border-bottom: 1px solid $secondary-c3;
+//     padding-bottom: 1rem;
+// }
+
 .footer {
     display: flex;
     flex-direction: column;

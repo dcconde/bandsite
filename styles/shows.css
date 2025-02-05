@@ -36,7 +36,6 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center;
   margin: auto;
 }
 @media screen and (min-width: 768px) {
@@ -115,7 +114,7 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-image: url(/assets/Images/hero-bio.jpg);
+  background-image: url(/assets/images/hero-shows.jpg);
   background-size: cover;
   background-position: center;
   background-color: rgba(50, 50, 50, 0.5);
@@ -138,6 +137,9 @@ a {
   padding: 1rem;
   margin: 0;
   text-align: center;
+}
+.hero-ban__title-shows {
+  color: #FFFFFF;
 }
 
 .section {
