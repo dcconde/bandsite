@@ -1,158 +1,229 @@
-@use './partials/global' as *;
-@use './partials/mixins' as *;
-@use './partials/variables' as *;
+@use "./partials/global" as *;
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
 
-.header { 
-    display: flex;
+.header {
+  display: flex;
 }
 
 .hero-ban {
-    width: 100%;
-    height: 15rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-image: url(/assets/images/hero-shows.jpg);
-    background-size: cover;
-    background-position: center;
-    background-color: rgba($primary-c1, 0.5);
+  width: 100%;
+  height: 15rem;
+  text-align: left;
+  // display: flex;
+  // justify-content: flex-start;
+  // align-items: center;
+  background-image: url(/assets/images/hero-shows.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: rgba($primary-c1, 0.5);
 
-    @include tablet {
-        flex-direction: row;
-    }
+  @include tablet {
+    flex-direction: row;
+  }
 
-    @include desktop {
-        flex-direction: row;
-    }
+  @include desktop {
+    flex-direction: row;
+  }
 
-    &__title {
-        font-size: 2rem;
-        line-height: 2rem;
-        font-weight: 700;
-        color: $primary-c3;
-        padding: 1rem;
-        margin: 0;
-        text-align: center;
-    }
+  .iframe {
+    float: right;
+  }
 
-    &__title-shows {
-        color: $primary-c3;
-    }
+  &__title {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: $primary-c3;
+    padding: 1rem;
+    margin: 0;
+    text-align: left;
+  }
+
+  &__title-shows {
+    color: $primary-c3;
+    padding: 1rem;
+  }
 }
 
 .section {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+
+  @include tablet {
     flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  }
+
+  @include desktop {
+    flex-direction: column;
+  }
+
+  &:nth-child(2) {
+    background-color: $secondary-c3; /* Background color for the gallery section */
+  }
+
+  &__title {
+    padding-top: 1.5rem;
     padding-bottom: 1rem;
+  }
 
-    @include tablet {
-        flex-direction: column;
-    }
+  &__img {
+    width: 100%;
+    padding: 0 0 1rem 0;
+  }
 
-    @include desktop {
-        flex-direction: column;
-    }
-  
-    &:nth-child(2) {
-        background-color: $secondary-c3; /* Background color for the gallery section */
-    }
+  &__paragraph-title {
+    padding: 1rem 0 1rem 0;
+  }
 
-    &__title {
-        padding-top: 1.5rem;
-        padding-bottom: 1rem;
-    }
+  &__paragraph-body {
+    font-size: 0.8rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+  }
 
-    &__img {
-        width: 100%;
-        padding: 0 0 1rem 0;
-    }
+  &__gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-    &__paragraph-title {
-        padding: 1rem 0 1rem 0;
-    }
+  &__photo {
+    padding-top: 1rem;
+    width: 100%;
+  }
 
-    &__paragraph-body {
-        font-size: 0.8rem;
-        line-height: 1.125rem;
-        font-weight: 400;
-    }
+  &__icon {
+    background-color: $primary-c1;
+  }
 
-    &__gallery {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+  &__quote {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
 
-    &__photo {
-        padding-top: 1rem;
-        width: 100%;
-    }
-
-    &__icon {
-       background-color: $primary-c1; 
-    }
-
-    &__quote {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        font-weight: 700;
-    }
-
-    &__quote-author {
-        font-size: 0.875rem;
-        line-height: 1.375rem;
-        font-weight: 600;
-    }
+  &__quote-author {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+  }
 }
 
+/* Container for all shows */
+.shows-list {
+    width: 100%; 
+    margin: 2rem auto;
+    padding: 1rem;
+  
+    @include tablet {
+      width: 90%;
+    }
+  
+    @include desktop {
+      width: 80%; 
+    }
+  }
+  
+  /* Each show "card" */
+  .show-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 100%; /* Ensure cards take full width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+  
+    @include tablet {
+      flex-direction: column;
+    }
+  
+    @include desktop {
+      flex-direction: column;
+    }
+  }
+  
+  /* Label text (DATE, VENUE, LOCATION) */
+  .show-label {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    color: $primary-c1;
+  }
+  
+  /* Actual detail (e.g., "Mon Sept 09 2024") */
+  .show-detail {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Buy Tickets button */
+  .buy-tickets-btn {
+    background-color: #333;
+    color: $primary-c3;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    text-align: center; /* Center the button */
+    margin-top: 1rem; /* Add spacing from the content above */
+  
+    &:hover {
+      background-color: $primary-c1;
+    }
+  }
+
 .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: $primary-c1;
+  color: $primary-c3;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  @include desktop {
+    flex-direction: row;
+  }
+
+  &__section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    background-color: $primary-c1;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 2rem;
     color: $primary-c3;
+    background-color: $primary-c1;
+  }
 
-    @include tablet {
-        flex-direction: row;
-    }
+  // &__title {
+  //     text-align: center;
+  // }
 
-    @include desktop {
-        flex-direction: row;
-    }
+  &__card {
+    padding: 2rem;
+  }
 
-    &__section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        width: 100%;
-        margin-bottom: 2rem;
-        color: $primary-c3;
-        background-color: $primary-c1;
-    }
-
-    // &__title {
-    //     text-align: center;
-    // }
-
-    &__card {
-        padding: 2rem;
-    }
-
-    &__text {
-        font-size: 0.813rem;
-        line-height: 1.125rem;
-        padding: 1rem;
-    }
+  &__text {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    padding: 1rem;
+  }
 }
 
 .icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 4rem;
 }

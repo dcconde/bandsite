@@ -43,23 +43,47 @@ function loopAndAppendShows() {
     const showItem = document.createElement("li");
     showItem.classList.add("show-item");
 
+    // DATE label
+    const dateLabel = document.createElement("div");
+    dateLabel.classList.add("show-label");
+    dateLabel.textContent = "DATE";
+    showItem.appendChild(dateLabel);
+
     // Create a heading for the show date
     const showDate = document.createElement("h3");
     showDate.innerText = `Date: ${upcomingShows[i].date}`;
     showDate.classList.add("show-date");
     showItem.appendChild(showDate);
 
-    // Create a paragraph for the venue and location
-    const venueLocation = document.createElement("p");
-    venueLocation.innerText = `Venue: ${upcomingShows[i].venue} - Location: ${upcomingShows[i].location}`;
-    venueLocation.classList.add("show-venue-location");
-    showItem.appendChild(venueLocation);
+    // VENUE label
+    const venueLabel = document.createElement("div");
+    venueLabel.classList.add("show-label");
+    venueLabel.textContent = "VENUE";
+    showItem.appendChild(venueLabel);
 
-    // Create a paragraph for the show description
-    const showDescription = document.createElement("p");
-    showDescription.innerText = upcomingShows[i].description;
-    showDescription.classList.add("show-description");
-    showItem.appendChild(showDescription);
+    // Create a paragraph for the venue
+    const showVenue = document.createElement("p");
+    showVenue.innerText = `Venue: ${upcomingShows[i].venue}`;
+    showVenue.classList.add("show-venue");
+    showItem.appendChild(showVenue);
+
+    // LOCATION label
+    const locationLabel = document.createElement("div");
+    locationLabel.classList.add("show-label");
+    locationLabel.textContent = "LOCATION";
+    showItem.appendChild(locationLabel);
+
+    // Create a paragraph for the location
+    const showLocation = document.createElement("p");
+    showLocation.innerText = `Location: ${upcomingShows[i].location}`;
+    showLocation.classList.add("show-location");
+    showItem.appendChild(showLocation);
+
+    // BUY TICKETS button
+    const buyButton = document.createElement("button");
+    buyButton.classList.add("buy-tickets-btn");
+    buyButton.textContent = "BUY TICKETS";
+    showItem.appendChild(buyButton);
 
     // Append the show item to the shows list
     showsList.appendChild(showItem);

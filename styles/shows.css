@@ -111,9 +111,7 @@ a {
 .hero-ban {
   width: 100%;
   height: 15rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  text-align: left;
   background-image: url(/assets/images/hero-shows.jpg);
   background-size: cover;
   background-position: center;
@@ -129,6 +127,9 @@ a {
     flex-direction: row;
   }
 }
+.hero-ban .iframe {
+  float: right;
+}
 .hero-ban__title {
   font-size: 2rem;
   line-height: 2rem;
@@ -136,10 +137,11 @@ a {
   color: #FFFFFF;
   padding: 1rem;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 .hero-ban__title-shows {
   color: #FFFFFF;
+  padding: 1rem;
 }
 
 .section {
@@ -201,6 +203,74 @@ a {
   font-weight: 600;
 }
 
+/* Container for all shows */
+.shows-list {
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .shows-list {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-list {
+    width: 80%;
+  }
+}
+
+/* Each show "card" */
+.show-item {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  width: 100%; /* Ensure cards take full width */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+}
+@media screen and (min-width: 768px) {
+  .show-item {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .show-item {
+    flex-direction: column;
+  }
+}
+
+/* Label text (DATE, VENUE, LOCATION) */
+.show-label {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #323232;
+}
+
+/* Actual detail (e.g., "Mon Sept 09 2024") */
+.show-detail {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Buy Tickets button */
+.buy-tickets-btn {
+  background-color: #333;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  text-align: center; /* Center the button */
+  margin-top: 1rem; /* Add spacing from the content above */
+}
+.buy-tickets-btn:hover {
+  background-color: #323232;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -243,5 +313,5 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: space-evenly;
+  gap: 4rem;
 }/*# sourceMappingURL=shows.css.map */
