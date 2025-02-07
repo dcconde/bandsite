@@ -305,18 +305,32 @@ a {
   color: #FFFFFF;
   background-color: #323232;
 }
-.footer__card {
-  padding: 2rem;
+.footer__title {
+  padding-left: 1rem;
+}
+.footer__card-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__card-container {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__card-container {
+    flex-direction: row;
+  }
 }
 .footer__text {
   font-size: 0.813rem;
   line-height: 1.125rem;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .icons {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 3.25rem;
 }/*# sourceMappingURL=bio.css.map */

@@ -219,18 +219,28 @@
         background-color: $primary-c1;
     }
 
-    // &__title {
-    //     text-align: center;
-    // }
+    &__title {
+        padding-left: 1rem;
+    }
 
-    &__card {
-        padding: 2rem;
+    &__card-container {
+        display: flex;
+        flex-direction: column;
+        
+        @include tablet {
+            flex-direction: row;
+        }
+    
+        @include desktop {
+            flex-direction: row;
+        }
+
     }
 
     &__text {
         font-size: 0.813rem;
         line-height: 1.125rem;
-        padding: 1rem;
+        padding: 1rem 0;
     }
 }
 
@@ -238,5 +248,5 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 3.25rem;
 }
