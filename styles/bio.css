@@ -103,6 +103,104 @@ a {
   height: 1.25rem;
   width: 7.5rem;
 }
+@media screen and (min-width: 768px) {
+  .logo__footer {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .logo__footer {
+    display: none;
+  }
+}
+.logo__footer-upper {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .logo__footer-upper {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .logo__footer-upper {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #323232;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    flex-direction: row;
+  }
+}
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 2rem;
+  color: #FFFFFF;
+  background-color: #323232;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__section {
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__section {
+    padding: 0 5rem;
+  }
+}
+.footer__card-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__card-container {
+    gap: 50px;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__card-container {
+    gap: 50px;
+    flex-direction: row;
+  }
+}
+.footer__card {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.footer__text {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  padding: 1rem 0;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 3.25rem;
+}
 
 .header {
   display: flex;
@@ -149,11 +247,13 @@ a {
 @media screen and (min-width: 768px) {
   .section {
     flex-direction: column;
+    padding: 0 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .section {
     flex-direction: column;
+    padding: 0 5rem;
   }
 }
 .section:nth-child(2) {
@@ -274,63 +374,4 @@ a {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  background-color: #323232;
-  color: #FFFFFF;
-}
-@media screen and (min-width: 768px) {
-  .footer {
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer {
-    flex-direction: row;
-  }
-}
-.footer__section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  margin-bottom: 2rem;
-  color: #FFFFFF;
-  background-color: #323232;
-}
-.footer__title {
-  padding-left: 1rem;
-}
-.footer__card-container {
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 768px) {
-  .footer__card-container {
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__card-container {
-    flex-direction: row;
-  }
-}
-.footer__text {
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-  padding: 1rem 0;
-}
-
-.icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 3.25rem;
 }/*# sourceMappingURL=bio.css.map */

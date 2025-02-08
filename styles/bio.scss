@@ -45,10 +45,12 @@
 
     @include tablet {
         flex-direction: column;
+        padding:0 2rem;
     }
 
     @include desktop {
         flex-direction: column;
+        padding:0 5rem;
     }
   
     &:nth-child(2) {
@@ -190,63 +192,3 @@
 //     border-bottom: 1px solid $secondary-c3;
 //     padding-bottom: 1rem;
 // }
-
-.footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    background-color: $primary-c1;
-    color: $primary-c3;
-
-    @include tablet {
-        flex-direction: row;
-    }
-
-    @include desktop {
-        flex-direction: row;
-    }
-
-    &__section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        width: 100%;
-        margin-bottom: 2rem;
-        color: $primary-c3;
-        background-color: $primary-c1;
-    }
-
-    &__title {
-        padding-left: 1rem;
-    }
-
-    &__card-container {
-        display: flex;
-        flex-direction: column;
-        
-        @include tablet {
-            flex-direction: row;
-        }
-    
-        @include desktop {
-            flex-direction: row;
-        }
-
-    }
-
-    &__text {
-        font-size: 0.813rem;
-        line-height: 1.125rem;
-        padding: 1rem 0;
-    }
-}
-
-.icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 3.25rem;
-}
