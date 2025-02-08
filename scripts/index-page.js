@@ -1,49 +1,29 @@
-// const bioComments = [ 
-//     {
-//       posted: "11/02/2023",
-//       name: "Victor Pinto",
-//       description:
-//         "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-//     },
-//     {
-//       posted: "10/28/2023",
-//       name: "Christina Cabrera",
-//       description:
-//         "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-//     },
-//     {
-//       posted: "10/20/2023",
-//       name: "Isaac Tadesse",
-//       description:
-//         "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-//     },
-//   ];
-  
-  // get the form from the HTML file
-  const commentForm = document.querySelector(".comment-form");
+import BandSiteApi from "./band-site-api.js";
+//import BandSiteApi from "./band-site-api.js";
+
+const bandSiteApi = new BandSiteApi();
+ 
   // get the comment list from the HTML file
   const commentList = document.querySelector(".comment-list"); // <ul>
   
-  async function loopAndAppendComments() {
+  async function displayComments() {
     commentList.innerText = ""; // clears the <ul> before looping and appending, avoiding duplicates
-  
-    const response = await axios.get("https://unit-2-project-api-25c1595833b2.herokuapp.com/comments?api_key=daniela");
-    console.log(response.data);
-    const bioComments = response.data;
 
-    for (let i = 0; i < bioComments.length; i++) {
+    const commentsData = await bandSiteApi.getComments();
+
+    for (let i = 0; i < commentsData.length; i++) {
       // create a comment list item
       const commentListItem = document.createElement("li");
       commentListItem.classList.add("comment-list__item");
   
       // create an h3 element for the commenter name
       const commentAuthor = document.createElement("h3");
-      commentAuthor.innerText = bioComments[i].name;
+      commentAuthor.innerText = commentsData[i].name;
       commentAuthor.classList.add("comment-list__name");
       commentListItem.appendChild(commentAuthor); // append to the <li>
 
       //convert timestamp to date in XX/XX/XXXX format
-      const date = new Date(bioComments[i].timestamp);
+      const date = new Date(commentsData[i].timestamp);
       console.log(date.toLocaleDateString('en-US'));
       const dateNumber = date.toLocaleDateString('en-US')
 
@@ -55,7 +35,7 @@
   
       // create a p tag for the comment body
       const commentBody = document.createElement("p");
-      commentBody.innerText = bioComments[i].comment;
+      commentBody.innerText = commentsData[i].comment;
       commentBody.classList.add("comment-list__description");
       commentListItem.appendChild(commentBody);
   
@@ -63,37 +43,29 @@
       commentList.appendChild(commentListItem);
     }
   }
-  
+  displayComments();
+
+  // get the form from the HTML file
+  const commentForm = document.querySelector(".comment-form");
   // Listen for the comment form submission
   commentForm.addEventListener("submit", async function (event) {
     event.preventDefault();
-    // Extract data from form fields
+
+    // create object where extracted data is placed?
     const newComment = {
-      // posted: new Date().toLocaleDateString(),
       name: event.target.name.value, 
       comment: event.target.comment.value,
     };
 
-    try {
-      await axios.post(
-        "https://unit-2-project-api-25c1595833b2.herokuapp.com/comments?api_key=daniela",
-        newComment
-      );
-    } catch (error) {
-      console.error(error);
-    }
-  
-    // Add the new comment to the start of the bioComments array
-    // bioComments.unshift(newComment);
-    // console.log(bioComments);
+    await bandSiteApi.postComment(newComment);
   
     // Re-render the comments list
-    loopAndAppendComments();
+    displayComments();
   
     // Reset the form
     event.target.reset();
   });
   
   // Initial rendering of the comments
-  loopAndAppendComments();
+  // displayComments();
   
