@@ -30,7 +30,7 @@ class BandSiteApi {
 
     async getShowDates () {
         try {
-            const response = await axios.get(`${this.baseUrl}/showdates`);
+            const response = await axios.get(`${this.baseUrl}/showdates?api_key=${this.apiKey}`);
 
             //sort the data by date
             response.data.sort((a, b) => {

@@ -1,46 +1,16 @@
-// const upcomingShows = [ 
-//     {
-//         date: "Mon Sept 09 2024",
-//         venue: "Ronald Lane",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Tue Sept 17 2024",
-//         venue: "Pier 3 East",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Sat Oct 12 2024",
-//         venue: "View Lounge",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Sat Nov 16 2024",
-//         venue: "Hyatt Agency",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Fri Nov 29 2024",
-//         venue: "Moscow Center",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Wed Dec 18 2024",
-//         venue: "Press Club",
-//         location: "San Francisco, CA",
-//     },
-//   ];
+import BandSiteApi from "./band-site-api.js"
+//import BandSiteApi from "./band-site-api.js";
 
-  // Get the container where you'll display the upcoming shows
-const showsList = document.querySelector(".shows-list"); // assuming an <ul> or <div> container for the shows
+const bandSiteApi = new BandSiteApi();
+
+// Get the container where you'll display the upcoming shows
+const showsList = document.querySelector(".shows-list"); // <ul> 
 
 // Function to loop through the upcoming shows and display them
-async function loopAndAppendShows() {
+async function displayShows() {
   showsList.innerHTML = ""; // clears the container before appending new content
 
-  const response = await axios.get("https://unit-2-project-api-25c1595833b2.herokuapp.com/showdates?api_key=daniela");
-  console.log(response.data);
-  const upcomingShows = response.data;
+  const upcomingShows = await bandSiteApi.getShowDates();
 
   for (let i = 0; i < upcomingShows.length; i++) {
     // Create a list item for each show
@@ -100,4 +70,4 @@ async function loopAndAppendShows() {
 }
 
 // Call the function to initially render the upcoming shows
-loopAndAppendShows();
+displayShows();
