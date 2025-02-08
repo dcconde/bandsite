@@ -65,18 +65,27 @@
   }
   
   // Listen for the comment form submission
-  commentForm.addEventListener("submit", function (event) {
+  commentForm.addEventListener("submit", async function (event) {
     event.preventDefault();
     // Extract data from form fields
     const newComment = {
-      posted: new Date().toLocaleDateString(),
-      name: event.target.name.value, // Assuming 'name' is the correct input field for the commenter's name
-      description: event.target.commentBody.value, // Assuming 'commentBody' is the correct input field for the comment body
+      // posted: new Date().toLocaleDateString(),
+      name: event.target.name.value, 
+      comment: event.target.comment.value,
     };
+
+    try {
+      await axios.post(
+        "https://unit-2-project-api-25c1595833b2.herokuapp.com/comments?api_key=daniela",
+        newComment
+      );
+    } catch (error) {
+      console.error(error);
+    }
   
     // Add the new comment to the start of the bioComments array
-    bioComments.unshift(newComment);
-    console.log(bioComments);
+    // bioComments.unshift(newComment);
+    // console.log(bioComments);
   
     // Re-render the comments list
     loopAndAppendComments();
