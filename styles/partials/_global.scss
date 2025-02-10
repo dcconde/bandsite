@@ -177,6 +177,25 @@ a {
         }
     }
 
+    &__top-container {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            padding-top: 1.5rem;
+            padding-bottom: 1rem;
+            gap: 100px;
+        }
+    
+        @include desktop {
+            flex-direction: row;
+            padding-top: 1.5rem;
+            padding-bottom: 1rem;
+            gap: 100px;
+        }
+    }
+
     // &__title {
     //     padding-left: 1rem;
     // }

@@ -19,8 +19,8 @@ async function displayShows() {
 
     //convert timestamp to date in XX/XX/XXXX format
     const date = new Date(upcomingShows[i].date);
-    console.log(date.toLocaleDateString('en-US'));
-    const dateNumber = date.toLocaleDateString('en-US')
+    console.log(date.toDateString('en-US'));
+    const dateNumber = date.toDateString('en-US');
 
     // DATE label
     const dateLabel = document.createElement("div");

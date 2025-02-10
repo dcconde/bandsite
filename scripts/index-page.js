@@ -25,7 +25,7 @@ const bandSiteApi = new BandSiteApi();
       //convert timestamp to date in XX/XX/XXXX format
       const date = new Date(commentsData[i].timestamp);
       console.log(date.toLocaleDateString('en-US'));
-      const dateNumber = date.toLocaleDateString('en-US')
+      const dateNumber = date.toLocaleDateString('en-US');
 
       //create a p tag for the comment timestamp
       const commentDate = document.createElement("p");

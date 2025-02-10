@@ -169,6 +169,26 @@ a {
     padding: 0 5rem;
   }
 }
+.footer__top-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__top-container {
+    flex-direction: row;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    gap: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__top-container {
+    flex-direction: row;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    gap: 100px;
+  }
+}
 .footer__card-container {
   display: flex;
   flex-direction: column;
@@ -279,6 +299,21 @@ a {
     margin: auto;
   }
 }
+.section__container {
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .section__container {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section__container {
+    width: 80%;
+    margin: auto;
+  }
+}
 .section__paragraph-title {
   padding: 1rem 0 1rem 0;
 }
@@ -287,6 +322,16 @@ a {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .section__paragraph-wrapper {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section__paragraph-wrapper {
+    flex-direction: row;
+  }
 }
 .section__paragraph-body {
   font-size: 0.8rem;
@@ -349,6 +394,7 @@ a {
   margin-bottom: 2rem;
 }
 .comment-form__label {
+  color: #AFAFAF;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
@@ -356,18 +402,20 @@ a {
   padding: 0.75rem;
   margin-bottom: 1rem;
   border: 1px solid #AFAFAF;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
   width: 100%;
   font-size: 1rem;
 }
 .comment-form__button {
   color: #FFFFFF;
-  align-self: flex-start;
+  align-self: flex-end;
   padding: 0.75rem 1.5rem;
   background-color: #323232;
   font-size: 1rem;
   border: none;
   border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .comment-list {

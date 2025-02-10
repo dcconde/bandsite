@@ -169,6 +169,26 @@ a {
     padding: 0 5rem;
   }
 }
+.footer__top-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__top-container {
+    flex-direction: row;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    gap: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__top-container {
+    flex-direction: row;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    gap: 100px;
+  }
+}
 .footer__card-container {
   display: flex;
   flex-direction: column;
@@ -397,9 +417,37 @@ a {
   margin-bottom: 2rem;
   color: #FFFFFF;
   background-color: #323232;
+  padding: 0 1rem;
 }
-.footer__title {
-  padding-left: 1rem;
+@media screen and (min-width: 768px) {
+  .footer__section {
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__section {
+    padding: 0 5rem;
+  }
+}
+.footer__top-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__top-container {
+    flex-direction: row;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    gap: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__top-container {
+    flex-direction: row;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    gap: 100px;
+  }
 }
 .footer__card-container {
   display: flex;
@@ -407,13 +455,19 @@ a {
 }
 @media screen and (min-width: 768px) {
   .footer__card-container {
+    gap: 50px;
     flex-direction: row;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__card-container {
+    gap: 50px;
     flex-direction: row;
   }
+}
+.footer__card {
+  flex-grow: 1;
+  flex-basis: 0;
 }
 .footer__text {
   font-size: 0.813rem;

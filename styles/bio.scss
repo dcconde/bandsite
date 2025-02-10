@@ -77,6 +77,20 @@
         }
     }
 
+    &__container {
+        padding: 0 1rem;
+
+        @include tablet {
+            width:80%;
+            margin: auto;
+        }
+    
+        @include desktop {
+            width: 80%;
+            margin: auto;
+        }
+    }
+
     &__paragraph-title {
         padding: 1rem 0 1rem 0;
     }
@@ -86,6 +100,14 @@
         flex-direction: column;
         justify-content: center;
         gap: 1rem;
+
+        @include tablet {
+            flex-direction: row;
+        }
+    
+        @include desktop {
+            flex-direction: row;
+        }
     }
 
     &__paragraph-body {
@@ -157,6 +179,7 @@
     margin-bottom: 2rem;
 
     &__label {
+        color: $primary-c2;
         margin-bottom: 0.5rem;
         font-weight: bold;
     }
@@ -165,19 +188,21 @@
         padding: 0.75rem;
         margin-bottom: 1rem;
         border: 1px solid $primary-c2;
-        border-radius: 0.25rem;
+        border-radius: 0.3rem;
         width: 100%;
         font-size: 1rem;
     }
 
     &__button {
         color: $primary-c3;
-        align-self: flex-start;
+        align-self: flex-end;
         padding: 0.75rem 1.5rem;
         background-color: $primary-c1;
         font-size: 1rem;
         border: none;
         border-radius: 0.25rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
     }
 }
 
